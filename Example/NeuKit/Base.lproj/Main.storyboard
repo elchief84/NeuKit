@@ -1,0 +1,978 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="eKL-qp-C5e">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--NeuKit Demo-->
+        <scene sceneID="fhs-gI-KUD">
+            <objects>
+                <tableViewController id="h0J-AS-lD6" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="RVs-Vy-yJZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <sections>
+                            <tableViewSection id="cJb-qi-fH7">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="60" id="Dbo-wH-Svs">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Dbo-wH-Svs" id="q7S-mF-PkK">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text Fields" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ru-1h-hEv">
+                                                    <rect key="frame" x="20" y="0.0" width="374" height="60"/>
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                                    <color key="textColor" name="Foreground"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="7ru-1h-hEv" secondAttribute="bottom" id="BdR-4u-VQi"/>
+                                                <constraint firstItem="7ru-1h-hEv" firstAttribute="leading" secondItem="q7S-mF-PkK" secondAttribute="leading" constant="20" id="Do7-Ug-nwF"/>
+                                                <constraint firstAttribute="trailing" secondItem="7ru-1h-hEv" secondAttribute="trailing" constant="20" id="eXo-Ti-Jde"/>
+                                                <constraint firstItem="7ru-1h-hEv" firstAttribute="top" secondItem="q7S-mF-PkK" secondAttribute="top" id="mOR-eU-wcU"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="vXZ-lx-hvc" kind="show" id="tki-xq-Nmi"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="60" id="nG5-mP-3do">
+                                        <rect key="frame" x="0.0" y="88" width="414" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nG5-mP-3do" id="gIJ-kW-AV9">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Buttons" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J6o-mG-2zl">
+                                                    <rect key="frame" x="20" y="0.0" width="374" height="60"/>
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                                    <color key="textColor" name="Foreground"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="J6o-mG-2zl" secondAttribute="bottom" id="Bzo-Sg-avk"/>
+                                                <constraint firstItem="J6o-mG-2zl" firstAttribute="leading" secondItem="gIJ-kW-AV9" secondAttribute="leading" constant="20" id="L1M-J6-k6s"/>
+                                                <constraint firstAttribute="trailing" secondItem="J6o-mG-2zl" secondAttribute="trailing" constant="20" id="M1f-8U-5fO"/>
+                                                <constraint firstItem="J6o-mG-2zl" firstAttribute="top" secondItem="gIJ-kW-AV9" secondAttribute="top" id="a8z-wt-grE"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="Mks-Bw-zdO" kind="show" id="bFc-cn-uCN"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="h0J-AS-lD6" id="lQH-BV-8EB"/>
+                            <outlet property="delegate" destination="h0J-AS-lD6" id="5fh-dT-d51"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="NeuKit Demo" id="Toh-OQ-AGG"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iaL-H7-XPa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-814.49275362318849" y="130.58035714285714"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Nay-gQ-9es">
+            <objects>
+                <navigationController id="eKL-qp-C5e" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="j6m-om-0vl">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="h0J-AS-lD6" kind="relationship" relationship="rootViewController" id="FfM-Hd-NWA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0v2-gp-qt4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1688" y="133"/>
+        </scene>
+        <!--Text Fields-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="insert your text here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p1p-32-Zpm">
+                                <rect key="frame" x="30" y="126" width="354" height="50"/>
+                                <color key="backgroundColor" name="Background"/>
+                                <color key="tintColor" name="Foreground"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="cRB-66-NC4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="horizontalMargin">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="active" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowDarkOffsetX">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowDarkOffsetY">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowLightOffsetX">
+                                        <real key="value" value="-6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowLightOffsetY">
+                                        <real key="value" value="-6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="cornersLeft" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="cornersRight" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="insert your text here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="at3-1d-eXl">
+                                <rect key="frame" x="30" y="199" width="354" height="50"/>
+                                <color key="backgroundColor" name="Background"/>
+                                <color key="tintColor" name="Foreground"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="7u7-yr-cJ4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="horizontalMargin">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="active" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowDarkOffsetX">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowDarkOffsetY">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowLightOffsetX">
+                                        <real key="value" value="-2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowLightOffsetY">
+                                        <real key="value" value="-2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="cornersRight" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="cornersLeft" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="insert your text here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mp3-hE-2NM">
+                                <rect key="frame" x="30" y="272" width="354" height="50"/>
+                                <color key="backgroundColor" name="Background"/>
+                                <color key="tintColor" name="Foreground"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="2oM-g7-mOH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="horizontalMargin">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="active" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="reverse" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowDarkOffsetX">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowDarkOffsetY">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowLightOffsetX">
+                                        <real key="value" value="-6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowLightOffsetY">
+                                        <real key="value" value="-6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="cornersRight" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="cornersLeft" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="insert your text here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4fU-Gp-dA7">
+                                <rect key="frame" x="30" y="345" width="354" height="50"/>
+                                <color key="backgroundColor" name="Background"/>
+                                <color key="tintColor" name="Foreground"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Pr4-oW-frf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="horizontalMargin">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="active" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="reverse" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="darkShadowColor">
+                                        <color key="value" red="0.15686274510000001" green="0.15686274510000001" blue="0.34901960780000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="lightShadowColor">
+                                        <color key="value" name="AccentLight"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowDarkOffsetX">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowDarkOffsetY">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowLightOffsetX">
+                                        <real key="value" value="-4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowLightOffsetY">
+                                        <real key="value" value="-4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="cornersLeft" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="cornersRight" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="insert your text here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vfh-No-JAW">
+                                <rect key="frame" x="30" y="418" width="354" height="50"/>
+                                <color key="backgroundColor" name="Background"/>
+                                <color key="tintColor" name="Foreground"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="6fJ-Qq-SXA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="horizontalMargin">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="active" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="reverse" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowDarkOffsetX">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowDarkOffsetY">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowLightOffsetX">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowLightOffsetY">
+                                        <real key="value" value="-4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="cornersLeft" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="cornersRight" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="insert your text here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hoW-zw-Jqf">
+                                <rect key="frame" x="30" y="491" width="354" height="50"/>
+                                <color key="backgroundColor" name="Background"/>
+                                <color key="tintColor" name="Foreground"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="INS-TL-qYb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="horizontalMargin">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="active" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="reverse" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="darkShadowColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowDarkOffsetX">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowDarkOffsetY">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowLightOffsetX">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowLightOffsetY">
+                                        <real key="value" value="-4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="cornersLeft" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="cornersRight" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="insert your text here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZyR-ds-yWp">
+                                <rect key="frame" x="30" y="564" width="354" height="50"/>
+                                <color key="backgroundColor" name="Background"/>
+                                <color key="tintColor" name="Foreground"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="g2J-x6-hwu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="horizontalMargin">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="active" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="reverse" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowDarkOffsetX">
+                                        <real key="value" value="-6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowDarkOffsetY">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowLightOffsetX">
+                                        <real key="value" value="-6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowLightOffsetY">
+                                        <real key="value" value="-6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="cornersLeft" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="cornersRight" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="insert your text here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Hl6-8v-lwL">
+                                <rect key="frame" x="30" y="637" width="354" height="50"/>
+                                <color key="backgroundColor" name="Background"/>
+                                <color key="tintColor" name="Foreground"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="P6d-qI-eFS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="horizontalMargin">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="active" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="reverse" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowDarkOffsetX">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowDarkOffsetY">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowLightOffsetX">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowLightOffsetY">
+                                        <real key="value" value="-6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="cornersLeft" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="cornersRight" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" name="Background"/>
+                        <constraints>
+                            <constraint firstItem="vfh-No-JAW" firstAttribute="top" secondItem="4fU-Gp-dA7" secondAttribute="bottom" constant="23" id="3yI-qk-1Ix"/>
+                            <constraint firstItem="4fU-Gp-dA7" firstAttribute="top" secondItem="Mp3-hE-2NM" secondAttribute="bottom" constant="23" id="6Px-Vb-J3u"/>
+                            <constraint firstItem="at3-1d-eXl" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="10" id="Buc-Tg-eSx"/>
+                            <constraint firstItem="Mp3-hE-2NM" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="10" id="DvT-Me-7YP"/>
+                            <constraint firstItem="ZyR-ds-yWp" firstAttribute="top" secondItem="hoW-zw-Jqf" secondAttribute="bottom" constant="23" id="KEI-ap-XQf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Hl6-8v-lwL" secondAttribute="trailing" constant="10" id="KdL-2q-tmO"/>
+                            <constraint firstItem="p1p-32-Zpm" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="10" id="MAi-I6-zdb"/>
+                            <constraint firstItem="vfh-No-JAW" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="10" id="MMQ-dA-NA5"/>
+                            <constraint firstItem="4fU-Gp-dA7" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="10" id="Vxc-Gd-XOg"/>
+                            <constraint firstItem="Hl6-8v-lwL" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="10" id="YXL-j7-HTz"/>
+                            <constraint firstItem="hoW-zw-Jqf" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="10" id="dwt-CO-RkD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4fU-Gp-dA7" secondAttribute="trailing" constant="10" id="iFC-Si-nbA"/>
+                            <constraint firstItem="ZyR-ds-yWp" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="10" id="j8g-s2-n2B"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hoW-zw-Jqf" secondAttribute="trailing" constant="10" id="l0r-ZD-0Ax"/>
+                            <constraint firstItem="Hl6-8v-lwL" firstAttribute="top" secondItem="ZyR-ds-yWp" secondAttribute="bottom" constant="23" id="lJK-Ec-Yjf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Mp3-hE-2NM" secondAttribute="trailing" constant="10" id="lNF-63-fA0"/>
+                            <constraint firstItem="at3-1d-eXl" firstAttribute="top" secondItem="p1p-32-Zpm" secondAttribute="bottom" constant="23" id="n0K-T3-MVV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vfh-No-JAW" secondAttribute="trailing" constant="10" id="nfW-VL-fzC"/>
+                            <constraint firstItem="Mp3-hE-2NM" firstAttribute="top" secondItem="at3-1d-eXl" secondAttribute="bottom" constant="23" id="qU6-N5-lX3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="p1p-32-Zpm" secondAttribute="trailing" constant="10" id="t3l-qg-8w9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZyR-ds-yWp" secondAttribute="trailing" constant="10" id="tT1-RJ-35n"/>
+                            <constraint firstItem="p1p-32-Zpm" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="38" id="tzK-O0-tCv"/>
+                            <constraint firstItem="hoW-zw-Jqf" firstAttribute="top" secondItem="vfh-No-JAW" secondAttribute="bottom" constant="23" id="vo1-rr-PpN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="at3-1d-eXl" secondAttribute="trailing" constant="10" id="wPV-Lp-qiA"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Text Fields" id="6Wo-lr-U5Y"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="135" y="-234"/>
+        </scene>
+        <!--Buttons-->
+        <scene sceneID="af5-r6-Jc5">
+            <objects>
+                <viewController id="Mks-Bw-zdO" customClass="ButtonViewController" customModule="NeuKit_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="i6m-In-waA"/>
+                        <viewControllerLayoutGuide type="bottom" id="acz-tr-cHw"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BdN-vv-vNm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mp6-Zb-383">
+                                <rect key="frame" x="30" y="108" width="354" height="50"/>
+                                <color key="backgroundColor" name="Background"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="y70-dq-CXe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                <color key="tintColor" name="Foreground"/>
+                                <state key="normal" title="Press here"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="active" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowDarkOffsetX">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowDarkOffsetY">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowLightOffsetX">
+                                        <real key="value" value="-6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowLightOffsetY">
+                                        <real key="value" value="-6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dhu-S9-2JH">
+                                <rect key="frame" x="30" y="178" width="354" height="50"/>
+                                <color key="backgroundColor" name="Background"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="9lx-NE-n27"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                <color key="tintColor" name="Foreground"/>
+                                <state key="normal" title="Press here"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="active" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowDarkOffsetX">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowDarkOffsetY">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowLightOffsetX">
+                                        <real key="value" value="-3"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowLightOffsetY">
+                                        <real key="value" value="-3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="quX-pL-G2t">
+                                <rect key="frame" x="30" y="248" width="354" height="50"/>
+                                <color key="backgroundColor" name="Background"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Ocd-EX-e71"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                <color key="tintColor" name="Foreground"/>
+                                <state key="normal" title="Press here"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="active" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="reverse" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowDarkOffsetX">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowDarkOffsetY">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowLightOffsetX">
+                                        <real key="value" value="-6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowLightOffsetY">
+                                        <real key="value" value="-6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ktb-1c-FM6">
+                                <rect key="frame" x="30" y="318" width="354" height="50"/>
+                                <color key="backgroundColor" name="Background"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Opa-cB-EGc"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="xKQ-2A-Z0j"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                <color key="tintColor" name="Foreground"/>
+                                <state key="normal" title="Press here"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="active" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="reverse" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowDarkOffsetX">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowDarkOffsetY">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowLightOffsetX">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowLightOffsetY">
+                                        <real key="value" value="-6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4oN-qA-baW">
+                                <rect key="frame" x="30" y="388" width="354" height="50"/>
+                                <color key="backgroundColor" name="Background"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Neg-vx-YLT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                <color key="tintColor" name="Foreground"/>
+                                <state key="normal" title="Press here"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="active" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="reverse" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowDarkOffsetX">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowDarkOffsetY">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowLightOffsetX">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowLightOffsetY">
+                                        <real key="value" value="-6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="darkShadowColor">
+                                        <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0sR-ZP-YMn">
+                                <rect key="frame" x="30" y="458" width="100" height="50"/>
+                                <color key="backgroundColor" name="Background"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="g6a-EX-09d"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                <color key="tintColor" name="Foreground"/>
+                                <state key="normal" title="Press here"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="active" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="reverse" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowDarkOffsetX">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowDarkOffsetY">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowLightOffsetX">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowLightOffsetY">
+                                        <real key="value" value="-6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="hapticLevel">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Y2-SD-FJC">
+                                <rect key="frame" x="157" y="458" width="100" height="50"/>
+                                <color key="backgroundColor" name="Background"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Whu-ek-pMc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                <color key="tintColor" name="Foreground"/>
+                                <state key="normal" title="Press here"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="active" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="reverse" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowDarkOffsetX">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowDarkOffsetY">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowLightOffsetX">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowLightOffsetY">
+                                        <real key="value" value="-6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="hapticLevel">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MHC-2g-dkk">
+                                <rect key="frame" x="284" y="458" width="100" height="50"/>
+                                <color key="backgroundColor" name="Background"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" header="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="aEd-zc-Ajz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                <color key="tintColor" name="Foreground"/>
+                                <state key="normal" title="Press here"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="active" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="reverse" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowDarkOffsetX">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowDarkOffsetY">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowLightOffsetX">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowLightOffsetY">
+                                        <real key="value" value="-6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="hapticLevel">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uwJ-Ov-rN4">
+                                <rect key="frame" x="30" y="528" width="50" height="50"/>
+                                <color key="backgroundColor" name="Background"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="aMJ-mZ-r91"/>
+                                    <constraint firstAttribute="width" constant="50" id="e24-dR-9UU"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="xmark.seal.fill" catalog="system"/>
+                                <state key="disabled" image="xmark.seal.fill" catalog="system"/>
+                                <state key="selected" image="checkmark.seal.fill" catalog="system"/>
+                                <state key="highlighted" image="checkmark.seal.fill" catalog="system"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="active" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="reverse" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowDarkOffsetX">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowDarkOffsetY">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowLightOffsetX">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowLightOffsetY">
+                                        <real key="value" value="-6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isToggle" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="highligthColor">
+                                        <color key="value" name="AccentDark"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="normalColor">
+                                        <color key="value" name="AccentRed"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="hapticLevel">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bIp-5F-cNt">
+                                <rect key="frame" x="100" y="528" width="279" height="50"/>
+                                <color key="backgroundColor" name="Background"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="EpT-WF-WX9"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="xmark.seal.fill" catalog="system"/>
+                                <state key="disabled" image="xmark.seal.fill" catalog="system"/>
+                                <state key="selected" image="checkmark.seal.fill" catalog="system"/>
+                                <state key="highlighted" image="checkmark.seal.fill" catalog="system"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="active" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="reverse" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowDarkOffsetX">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowDarkOffsetY">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowLightOffsetX">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowLightOffsetY">
+                                        <real key="value" value="-6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isToggle" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="highligthColor">
+                                        <color key="value" name="AccentDark"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="normalColor">
+                                        <color key="value" name="AccentRed"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="hapticLevel">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p9W-5w-JCm">
+                                <rect key="frame" x="30" y="598" width="167" height="50"/>
+                                <color key="backgroundColor" name="Background"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="2wV-1y-PFf"/>
+                                    <constraint firstAttribute="height" constant="50" id="kbX-NG-1ZY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                <color key="tintColor" name="Foreground"/>
+                                <state key="normal" title="Press here"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="active" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowDarkOffsetX">
+                                        <real key="value" value="-6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowDarkOffsetY">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowLightOffsetX">
+                                        <real key="value" value="-6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowLightOffsetY">
+                                        <real key="value" value="-6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="cornersRight" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="cornersLeft" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jSL-Bg-ncv">
+                                <rect key="frame" x="217" y="598" width="167" height="50"/>
+                                <color key="backgroundColor" name="Background"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="133-f7-hvo"/>
+                                    <constraint firstAttribute="height" constant="50" id="7JZ-h8-5A7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                <color key="tintColor" name="Foreground"/>
+                                <state key="normal" title="Press here"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="active" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowDarkOffsetX">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowDarkOffsetY">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowLightOffsetX">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowLightOffsetY">
+                                        <real key="value" value="-6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="cornersLeft" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="cornersRight" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iuH-a0-Koe">
+                                <rect key="frame" x="30" y="668" width="67" height="50"/>
+                                <color key="backgroundColor" name="Background"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="67" id="0cD-as-iiN"/>
+                                    <constraint firstAttribute="height" constant="50" id="Fpy-UW-YEc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                <color key="tintColor" name="Foreground"/>
+                                <state key="normal" title="OFF">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <state key="disabled" title="OFF"/>
+                                <state key="selected" title="ON"/>
+                                <state key="highlighted" title="ON"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="active" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowDarkOffsetX">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowDarkOffsetY">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowLightOffsetX">
+                                        <real key="value" value="-6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowLightOffsetY">
+                                        <real key="value" value="-6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isToggle" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="normalColor">
+                                        <color key="value" name="AccentRed"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="highligthColor">
+                                        <color key="value" name="AccentDark"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onPressButton:" destination="Mks-Bw-zdO" eventType="touchUpInside" id="2eQ-iL-snk"/>
+                                    <action selector="onPressButton:" destination="Mks-Bw-zdO" eventType="touchUpOutside" id="6GL-6J-Mn3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ezI-Pc-Kdi">
+                                <rect key="frame" x="117" y="668" width="267" height="50"/>
+                                <color key="backgroundColor" name="Background"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ouk-xJ-i9f"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
+                                <color key="tintColor" name="Foreground"/>
+                                <state key="normal" title="Press here"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="active" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowDarkOffsetX">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowDarkOffsetY">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowLightOffsetX">
+                                        <real key="value" value="-6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowLightOffsetY">
+                                        <real key="value" value="-6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" name="Background"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Ktb-1c-FM6" secondAttribute="trailing" constant="30" id="1w7-fU-Pm8"/>
+                            <constraint firstAttribute="trailing" secondItem="4oN-qA-baW" secondAttribute="trailing" constant="30" id="42y-cx-i3F"/>
+                            <constraint firstItem="0sR-ZP-YMn" firstAttribute="top" secondItem="4oN-qA-baW" secondAttribute="bottom" constant="20" id="7jR-zU-bBK"/>
+                            <constraint firstItem="quX-pL-G2t" firstAttribute="leading" secondItem="BdN-vv-vNm" secondAttribute="leading" constant="30" id="8LA-ke-NdI"/>
+                            <constraint firstItem="Mp6-Zb-383" firstAttribute="leading" secondItem="BdN-vv-vNm" secondAttribute="leading" constant="30" id="9zw-MU-Xbf"/>
+                            <constraint firstItem="ezI-Pc-Kdi" firstAttribute="leading" secondItem="iuH-a0-Koe" secondAttribute="trailing" constant="20" id="Bta-O3-26v"/>
+                            <constraint firstItem="MHC-2g-dkk" firstAttribute="top" secondItem="4oN-qA-baW" secondAttribute="bottom" constant="20" id="DJA-Hl-eIg"/>
+                            <constraint firstItem="7Y2-SD-FJC" firstAttribute="top" secondItem="4oN-qA-baW" secondAttribute="bottom" constant="20" id="EmG-AF-c9z"/>
+                            <constraint firstAttribute="trailing" secondItem="dhu-S9-2JH" secondAttribute="trailing" constant="30" id="OuE-NO-HMh"/>
+                            <constraint firstItem="jSL-Bg-ncv" firstAttribute="width" secondItem="p9W-5w-JCm" secondAttribute="width" id="QHJ-9Z-skt"/>
+                            <constraint firstItem="uwJ-Ov-rN4" firstAttribute="leading" secondItem="BdN-vv-vNm" secondAttribute="leadingMargin" constant="10" id="Qor-9M-LEr"/>
+                            <constraint firstItem="4oN-qA-baW" firstAttribute="top" secondItem="Ktb-1c-FM6" secondAttribute="bottom" constant="20" id="Sil-oM-nwd"/>
+                            <constraint firstItem="dhu-S9-2JH" firstAttribute="leading" secondItem="BdN-vv-vNm" secondAttribute="leading" constant="30" id="YlP-Dh-ppc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bIp-5F-cNt" secondAttribute="trailing" constant="15" id="ZOI-70-gpd"/>
+                            <constraint firstItem="iuH-a0-Koe" firstAttribute="top" secondItem="p9W-5w-JCm" secondAttribute="bottom" constant="20" id="aG8-BR-aMg"/>
+                            <constraint firstItem="dhu-S9-2JH" firstAttribute="top" secondItem="Mp6-Zb-383" secondAttribute="bottom" constant="20" id="adb-aZ-yx4"/>
+                            <constraint firstItem="jSL-Bg-ncv" firstAttribute="leading" secondItem="p9W-5w-JCm" secondAttribute="trailing" constant="20" id="bMh-eS-Y9V"/>
+                            <constraint firstItem="iuH-a0-Koe" firstAttribute="leading" secondItem="BdN-vv-vNm" secondAttribute="leadingMargin" constant="10" id="cBo-E1-XKq"/>
+                            <constraint firstItem="4oN-qA-baW" firstAttribute="leading" secondItem="BdN-vv-vNm" secondAttribute="leading" constant="30" id="d5D-uq-qh8"/>
+                            <constraint firstItem="7Y2-SD-FJC" firstAttribute="leading" secondItem="0sR-ZP-YMn" secondAttribute="trailing" constant="27" id="eMs-Ql-Pc7"/>
+                            <constraint firstAttribute="trailing" secondItem="quX-pL-G2t" secondAttribute="trailing" constant="30" id="ehI-Ek-o2v"/>
+                            <constraint firstItem="MHC-2g-dkk" firstAttribute="leading" secondItem="7Y2-SD-FJC" secondAttribute="trailing" constant="27" id="ft0-pN-ska"/>
+                            <constraint firstItem="bIp-5F-cNt" firstAttribute="leading" secondItem="uwJ-Ov-rN4" secondAttribute="trailing" constant="20" id="hS7-PQ-MxS"/>
+                            <constraint firstItem="Ktb-1c-FM6" firstAttribute="leading" secondItem="BdN-vv-vNm" secondAttribute="leading" constant="30" id="iNg-7T-BnU"/>
+                            <constraint firstAttribute="trailing" secondItem="MHC-2g-dkk" secondAttribute="trailing" constant="30" id="jCI-om-9la"/>
+                            <constraint firstItem="quX-pL-G2t" firstAttribute="top" secondItem="dhu-S9-2JH" secondAttribute="bottom" constant="20" id="kRc-QO-TlW"/>
+                            <constraint firstAttribute="trailing" secondItem="Mp6-Zb-383" secondAttribute="trailing" constant="30" id="kk9-wa-mAR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ezI-Pc-Kdi" secondAttribute="trailing" constant="10" id="oE2-VX-tgF"/>
+                            <constraint firstItem="7Y2-SD-FJC" firstAttribute="width" secondItem="0sR-ZP-YMn" secondAttribute="width" id="oEZ-Sl-uOy"/>
+                            <constraint firstItem="0sR-ZP-YMn" firstAttribute="leading" secondItem="BdN-vv-vNm" secondAttribute="leading" constant="30" id="pDE-0R-lES"/>
+                            <constraint firstItem="Mp6-Zb-383" firstAttribute="top" secondItem="i6m-In-waA" secondAttribute="bottom" constant="20" id="rBl-qx-mkH"/>
+                            <constraint firstItem="jSL-Bg-ncv" firstAttribute="top" secondItem="bIp-5F-cNt" secondAttribute="bottom" constant="20" id="rp0-2N-c4J"/>
+                            <constraint firstItem="uwJ-Ov-rN4" firstAttribute="top" secondItem="0sR-ZP-YMn" secondAttribute="bottom" constant="20" id="skB-TL-Rlk"/>
+                            <constraint firstItem="Ktb-1c-FM6" firstAttribute="top" secondItem="quX-pL-G2t" secondAttribute="bottom" constant="20" id="ttF-Kd-9qe"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jSL-Bg-ncv" secondAttribute="trailing" constant="10" id="uZc-0A-Hny"/>
+                            <constraint firstItem="p9W-5w-JCm" firstAttribute="leading" secondItem="BdN-vv-vNm" secondAttribute="leadingMargin" constant="10" id="unt-oe-AiT"/>
+                            <constraint firstItem="MHC-2g-dkk" firstAttribute="width" secondItem="0sR-ZP-YMn" secondAttribute="width" id="y27-UH-eJD"/>
+                            <constraint firstItem="bIp-5F-cNt" firstAttribute="top" secondItem="0sR-ZP-YMn" secondAttribute="bottom" constant="20" id="yAD-I5-VR7"/>
+                            <constraint firstItem="p9W-5w-JCm" firstAttribute="top" secondItem="uwJ-Ov-rN4" secondAttribute="bottom" constant="20" id="zHw-Ci-kPd"/>
+                            <constraint firstItem="ezI-Pc-Kdi" firstAttribute="top" secondItem="p9W-5w-JCm" secondAttribute="bottom" constant="20" id="ztx-1K-aJj"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Buttons" id="CdA-Eb-Cmi"/>
+                    <connections>
+                        <outlet property="disableButton" destination="ezI-Pc-Kdi" id="TIM-xq-Qnx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="69M-vV-tqQ" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="134.78260869565219" y="481.47321428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="checkmark.seal.fill" catalog="system" width="64" height="60"/>
+        <image name="xmark.seal.fill" catalog="system" width="64" height="60"/>
+        <namedColor name="AccentDark">
+            <color red="0.0" green="0.89800000190734863" blue="0.87099999189376831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AccentLight">
+            <color red="0.47499999403953552" green="1" blue="0.86699998378753662" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AccentRed">
+            <color red="1" green="0.27799999713897705" blue="0.18400000035762787" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Background">
+            <color red="0.95300000905990601" green="0.95300000905990601" blue="0.9649999737739563" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Foreground">
+            <color red="0.20000000298023224" green="0.28600001335144043" blue="0.45500001311302185" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
