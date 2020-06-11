@@ -69,6 +69,31 @@
                                             <segue destination="Mks-Bw-zdO" kind="show" id="bFc-cn-uCN"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="60" id="xsy-Rb-bWM">
+                                        <rect key="frame" x="0.0" y="148" width="414" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xsy-Rb-bWM" id="QFZ-fA-Q5y">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Views" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qBj-n0-WhH">
+                                                    <rect key="frame" x="20" y="0.0" width="374" height="60"/>
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                                    <color key="textColor" name="Foreground"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="qBj-n0-WhH" secondAttribute="bottom" id="262-Hw-vcc"/>
+                                                <constraint firstItem="qBj-n0-WhH" firstAttribute="top" secondItem="QFZ-fA-Q5y" secondAttribute="top" id="YTl-sw-6YR"/>
+                                                <constraint firstAttribute="trailing" secondItem="qBj-n0-WhH" secondAttribute="trailing" constant="20" id="pnL-Gl-wj1"/>
+                                                <constraint firstItem="qBj-n0-WhH" firstAttribute="leading" secondItem="QFZ-fA-Q5y" secondAttribute="leading" constant="20" id="qRc-Ta-zxu"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="dyt-mu-hf6" kind="show" id="8Gc-0n-gVS"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -423,7 +448,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="135" y="-234"/>
+            <point key="canvasLocation" x="290" y="-582"/>
         </scene>
         <!--Buttons-->
         <scene sceneID="af5-r6-Jc5">
@@ -953,7 +978,203 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="69M-vV-tqQ" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="134.78260869565219" y="481.47321428571428"/>
+            <point key="canvasLocation" x="290" y="131"/>
+        </scene>
+        <!--Views-->
+        <scene sceneID="AEA-lb-Vgu">
+            <objects>
+                <viewController id="dyt-mu-hf6" customClass="ViewsViewController" customModule="NeuKit_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SFq-4w-trX"/>
+                        <viewControllerLayoutGuide type="bottom" id="nbK-fb-qyZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iXk-c6-N7t">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GGm-QD-4Qt">
+                                <rect key="frame" x="217" y="123" width="167" height="128"/>
+                                <color key="backgroundColor" name="Background"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="rId-qW-pgm"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="active" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowDarkOffsetX">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowDarkOffsetY">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowLightOffsetX">
+                                        <real key="value" value="-2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowLightOffsetY">
+                                        <real key="value" value="-2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tla-ht-qxe">
+                                <rect key="frame" x="30" y="123" width="167" height="128"/>
+                                <color key="backgroundColor" name="Background"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="nKr-6I-dHK"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="active" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowDarkOffsetX">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowDarkOffsetY">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowLightOffsetX">
+                                        <real key="value" value="-6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowLightOffsetY">
+                                        <real key="value" value="-6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rbk-Tl-sny">
+                                <rect key="frame" x="30" y="271" width="167" height="128"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wK3-W8-Ho5">
+                                        <rect key="frame" x="30" y="30" width="107" height="68"/>
+                                        <color key="backgroundColor" name="Background"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="active" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowDarkOffsetX">
+                                                <real key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowDarkOffsetY">
+                                                <real key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowLightOffsetX">
+                                                <real key="value" value="-6"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowLightOffsetY">
+                                                <real key="value" value="-6"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="reverse" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" name="Background"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="wK3-W8-Ho5" secondAttribute="bottom" constant="30" id="5tg-3d-0HE"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="128" id="AbV-ZR-MZz"/>
+                                    <constraint firstItem="wK3-W8-Ho5" firstAttribute="leading" secondItem="rbk-Tl-sny" secondAttribute="leading" constant="30" id="NRh-GP-QTj"/>
+                                    <constraint firstAttribute="trailing" secondItem="wK3-W8-Ho5" secondAttribute="trailing" constant="30" id="XF1-ri-nq1"/>
+                                    <constraint firstItem="wK3-W8-Ho5" firstAttribute="top" secondItem="rbk-Tl-sny" secondAttribute="top" constant="30" id="aBe-Vw-0aF"/>
+                                    <constraint firstAttribute="height" constant="128" id="nzN-B0-RfX"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="active" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowDarkOffsetX">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowDarkOffsetY">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowLightOffsetX">
+                                        <real key="value" value="-6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowLightOffsetY">
+                                        <real key="value" value="-6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="93g-bR-DkX">
+                                <rect key="frame" x="217" y="271" width="167" height="128"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0jv-7p-LcD">
+                                        <rect key="frame" x="30" y="30" width="107" height="68"/>
+                                        <color key="backgroundColor" name="Background"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="active" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowDarkOffsetX">
+                                                <real key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowDarkOffsetY">
+                                                <real key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowLightOffsetX">
+                                                <real key="value" value="-6"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowLightOffsetY">
+                                                <real key="value" value="-6"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="reverse" value="NO"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" name="Background"/>
+                                <constraints>
+                                    <constraint firstItem="0jv-7p-LcD" firstAttribute="leading" secondItem="93g-bR-DkX" secondAttribute="leading" constant="30" id="7Kk-qo-qCz"/>
+                                    <constraint firstItem="0jv-7p-LcD" firstAttribute="top" secondItem="93g-bR-DkX" secondAttribute="top" constant="30" id="9MQ-nF-L8K"/>
+                                    <constraint firstAttribute="bottom" secondItem="0jv-7p-LcD" secondAttribute="bottom" constant="30" id="Bks-Vk-124"/>
+                                    <constraint firstAttribute="trailing" secondItem="0jv-7p-LcD" secondAttribute="trailing" constant="30" id="Hg2-gH-G74"/>
+                                    <constraint firstAttribute="height" constant="128" id="Jlh-7u-mbl"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="128" id="V0o-KB-tdb"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="active" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowDarkOffsetX">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowDarkOffsetY">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowLightOffsetX">
+                                        <real key="value" value="-6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowLightOffsetY">
+                                        <real key="value" value="-6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="reverse" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" name="Background"/>
+                        <constraints>
+                            <constraint firstItem="93g-bR-DkX" firstAttribute="trailing" secondItem="GGm-QD-4Qt" secondAttribute="trailing" id="5HE-p9-xvK"/>
+                            <constraint firstItem="93g-bR-DkX" firstAttribute="leading" secondItem="rbk-Tl-sny" secondAttribute="trailing" constant="20" id="9wr-Dl-bZA"/>
+                            <constraint firstItem="93g-bR-DkX" firstAttribute="leading" secondItem="GGm-QD-4Qt" secondAttribute="leading" id="BQp-Im-ipR"/>
+                            <constraint firstItem="tla-ht-qxe" firstAttribute="top" secondItem="SFq-4w-trX" secondAttribute="bottom" constant="35" id="Dq1-MK-Wck"/>
+                            <constraint firstItem="GGm-QD-4Qt" firstAttribute="leading" secondItem="tla-ht-qxe" secondAttribute="trailing" constant="20" id="KGE-cw-BOt"/>
+                            <constraint firstItem="GGm-QD-4Qt" firstAttribute="top" secondItem="SFq-4w-trX" secondAttribute="bottom" constant="35" id="KIk-HI-fSa"/>
+                            <constraint firstItem="tla-ht-qxe" firstAttribute="leading" secondItem="iXk-c6-N7t" secondAttribute="leadingMargin" constant="10" id="MJm-11-6Es"/>
+                            <constraint firstItem="GGm-QD-4Qt" firstAttribute="width" secondItem="tla-ht-qxe" secondAttribute="width" id="Q8l-Px-g4t"/>
+                            <constraint firstItem="rbk-Tl-sny" firstAttribute="leading" secondItem="iXk-c6-N7t" secondAttribute="leadingMargin" constant="10" id="dFZ-Gy-APv"/>
+                            <constraint firstItem="rbk-Tl-sny" firstAttribute="top" secondItem="tla-ht-qxe" secondAttribute="bottom" constant="20" id="vch-Hj-RaI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GGm-QD-4Qt" secondAttribute="trailing" constant="10" id="xGZ-Ku-fLh"/>
+                            <constraint firstItem="93g-bR-DkX" firstAttribute="top" secondItem="rbk-Tl-sny" secondAttribute="top" id="yzf-eg-nhj"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Views" id="qAi-aS-FE6"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MYr-AZ-bs4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="289.85507246376812" y="825"/>
         </scene>
     </scenes>
     <resources>

@@ -15,6 +15,8 @@
 		905D5C74248E2F32006D456D /* NeuKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905D5C73248E2F32006D456D /* NeuKit.swift */; };
 		905D5C76248E3311006D456D /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905D5C75248E3311006D456D /* UITextField.swift */; };
 		905D5C7D248E932F006D456D /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905D5C7C248E932F006D456D /* UIButton.swift */; };
+		905D5C81248FCC95006D456D /* UISegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905D5C80248FCC95006D456D /* UISegmentedControl.swift */; };
+		905D5C83248FDF67006D456D /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905D5C82248FDF67006D456D /* UIView.swift */; };
 		A6FC70CC029A3552CF94971D6FB75F4D /* NeuKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4E1E59FB804089F5164315144B0987 /* NeuKit-dummy.m */; };
 		AEDD85327E5C669A43D049DD6A803B91 /* Pods-NeuKit_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 727B1B6E25C1E47E6B96755E03BE79AF /* Pods-NeuKit_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B7B3BE1F07C50F0318F0474814B353EA /* Pods-NeuKit_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F2A642EB862CBFD226FE19F364A2B555 /* Pods-NeuKit_Example-dummy.m */; };
@@ -61,6 +63,8 @@
 		905D5C73248E2F32006D456D /* NeuKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NeuKit.swift; path = NeuKit/Classes/NeuKit.swift; sourceTree = "<group>"; };
 		905D5C75248E3311006D456D /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
 		905D5C7C248E932F006D456D /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
+		905D5C80248FCC95006D456D /* UISegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISegmentedControl.swift; sourceTree = "<group>"; };
+		905D5C82248FDF67006D456D /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		9D2DA2458079A18D5CADEFBDA667CD25 /* NeuKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NeuKit-prefix.pch"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A15C578FEF0E1A871A495F448BCBB544 /* NeuKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = NeuKit.debug.xcconfig; sourceTree = "<group>"; };
@@ -145,6 +149,8 @@
 			children = (
 				905D5C75248E3311006D456D /* UITextField.swift */,
 				905D5C7C248E932F006D456D /* UIButton.swift */,
+				905D5C80248FCC95006D456D /* UISegmentedControl.swift */,
+				905D5C82248FDF67006D456D /* UIView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -405,6 +411,8 @@
 				A6FC70CC029A3552CF94971D6FB75F4D /* NeuKit-dummy.m in Sources */,
 				905D5C74248E2F32006D456D /* NeuKit.swift in Sources */,
 				905D5C76248E3311006D456D /* UITextField.swift in Sources */,
+				905D5C81248FCC95006D456D /* UISegmentedControl.swift in Sources */,
+				905D5C83248FDF67006D456D /* UIView.swift in Sources */,
 				905D5C7D248E932F006D456D /* UIButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
