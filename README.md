@@ -22,7 +22,7 @@ pod 'NeuKit'
 
 ## Author
 
-vromano84, vincenzo.romano@healthtouch.eu
+elchief84, enzxx84@gmail.com
 
 ## License
 
