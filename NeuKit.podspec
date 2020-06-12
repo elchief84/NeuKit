@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'NeuKit'
-  s.version          = '0.0.1'
+  s.version          = '0.0.2'
   s.summary          = 'A Neumorphic replacement of Apple UIKit.'
   s.description      = <<-DESC
 A Neumorphic replacement of Apple UIKit. Turn your UI to neumorphic style.
@@ -13,7 +13,7 @@ A Neumorphic replacement of Apple UIKit. Turn your UI to neumorphic style.
   s.source           = { :git => 'https://github.com/elchief84/NeuKit.git', :tag => s.version.to_s }
   
   s.swift_version = '4.0'
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '10.0'
 
   s.source_files = 'NeuKit/Classes/**/*'
   

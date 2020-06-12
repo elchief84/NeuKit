@@ -1,6 +1,0 @@
-framework module Pods_NeuKit_Tests {
-  umbrella header "Pods-NeuKit_Tests-umbrella.h"
-
-  export *
-  module * { export * }
-}

@@ -1,5 +1,5 @@
 PODS:
-  - NeuKit (0.1.0)
+  - NeuKit (0.0.1)
 
 DEPENDENCIES:
   - NeuKit (from `../`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  NeuKit: 8add7c3a6db5b25916ceae1999010752eee706f8
+  NeuKit: 55ba1efa6d18caecbe7f88436893e3a49fa93689
 
-PODFILE CHECKSUM: 841bfedeb67e91ac3305648a7d12a139140a3db2
+PODFILE CHECKSUM: 675b2161ec577f1914e8999eb5fad6e0681d9bbd
 
-COCOAPODS: 1.9.1
+COCOAPODS: 1.9.3
