@@ -1,4 +1,5 @@
 # NeuKit
+A Neumorphic replacement of Apple UIKit. Turn your UI to neumorphic style.
 
 [![CI Status](https://img.shields.io/travis/vromano84/NeuKit.svg?style=flat)](https://travis-ci.org/vromano84/NeuKit)
 [![Version](https://img.shields.io/cocoapods/v/NeuKit.svg?style=flat)](https://cocoapods.org/pods/NeuKit)
@@ -32,4 +33,4 @@ NeuKit is available under the MIT license. See the LICENSE file for more info.
 
 <div style="text-align: right"><img src="http://www.enzoromano.eu/neukit/neukit-views.png" width="250"></div>
 <div style="text-align: right"><img src="http://www.enzoromano.eu/neukit/neukit-buttons.png" width="250"></div>
-<div style="text-align: right"><img src="http://www.enzoromano.eu/neukit/neukit-buttons.png" width="250"></div>
+<div style="text-align: right"><img src="http://www.enzoromano.eu/neukit/neukit-textfield.png" width="250"></div>
