@@ -34,6 +34,14 @@ extension UITextField {
             setupShadows()
         }
     }
+    
+    open override func awakeFromNib() {
+        super.awakeFromNib();
+        let tmpAddress = String(format: "%p", unsafeBitCast(self, to: Int.self))
+        if(Params.active[tmpAddress] == true){
+            setupShadows()
+        }
+    }
 
     open func setupShadows() {
         var shadowLayerDark:CAShapeLayer = CAShapeLayer();
