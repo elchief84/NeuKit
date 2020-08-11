@@ -277,6 +277,19 @@ extension UIView {
         self.backgroundColor = UIColor.clear
     }
     
+    open func delete() {
+        if(self.layer.sublayers != nil){
+            for item in self.layer.sublayers! {
+                if item.name == "shadowDark" {
+                    item.removeFromSuperlayer();
+                }
+                if item.name == "shadowLight" {
+                    item.removeFromSuperlayer();
+                }
+            }
+        }
+    }
+    
     func roundCorners(layer: CALayer, corners: UIRectCorner, radius: CGFloat) {
         let path = UIBezierPath(roundedRect: layer.bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
         let mask = CAShapeLayer()

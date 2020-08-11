@@ -229,7 +229,7 @@ extension UIButton {
         
         if(ButtonParams.hapticLevel[tmpAddress] != nil) {
             if(ButtonParams.hapticLevel[tmpAddress] != 0) {
-                let force:UIImpactFeedbackStyle = UIImpactFeedbackStyle(rawValue: ButtonParams.hapticLevel[tmpAddress]!-1)!
+                let force:UIImpactFeedbackGenerator.FeedbackStyle = UIImpactFeedbackGenerator.FeedbackStyle(rawValue: ButtonParams.hapticLevel[tmpAddress]!-1)!
                 UIImpactFeedbackGenerator(style: force).impactOccurred()
             }
         }

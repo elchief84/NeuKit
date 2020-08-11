@@ -97,11 +97,16 @@ extension UITextField {
             shadowLayerDark.name = "shadowDark"
             self.layer.insertSublayer(shadowLayerDark, at: 0)
             let content:CAShapeLayer = CAShapeLayer()
+            content.name = "content";
             content.frame = bounds
+            debugPrint("\(content.frame.size.width)");
             content.backgroundColor = self.backgroundColor?.cgColor
             roundCorners(layer:content, corners: corners, radius: Params.cornerRadius[tmpAddress]!)
             content.masksToBounds = true;
             shadowLayerDark.addSublayer(content)
+        }else{
+            shadowLayerDark.sublayers![0].frame = bounds
+            debugPrint("\(shadowLayerLight.sublayers![0].frame.size.width)");
         }
         shadowLayerDark.frame = bounds
         shadowLayerDark.shadowRadius = 4
@@ -121,12 +126,16 @@ extension UITextField {
             shadowLayerLight.name = "shadowLight"
             self.layer.insertSublayer(shadowLayerLight, at: 0)
             let content:CAShapeLayer = CAShapeLayer()
+            content.name = "content"
             content.frame = bounds
+            debugPrint("\(content.frame.size.width)");
             content.backgroundColor = self.backgroundColor?.cgColor
-            
             roundCorners(layer:content, corners: corners, radius: Params.cornerRadius[tmpAddress]!)
             content.masksToBounds = true;
             shadowLayerLight.addSublayer(content)
+        }else{
+            shadowLayerLight.sublayers![0].frame = bounds
+            debugPrint("\(shadowLayerLight.sublayers![0].frame.size.width)");
         }
         shadowLayerLight.frame = bounds
         shadowLayerLight.shadowRadius = 4
