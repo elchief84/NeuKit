@@ -10,11 +10,6 @@ import UIKit
 @IBDesignable
 extension UISegmentedControl {
 
-    override open func draw(_ rect: CGRect) {
-        // self.backgroundColor = UIColor.clear
-        setSegmentStyle()
-    }
-
     func setSegmentStyle() {
         let background:UIView = UIView()
         background.frame = bounds;

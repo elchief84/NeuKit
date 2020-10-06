@@ -22,6 +22,8 @@ extension UIView {
         static var shadowDarkOffsetY = [String:CGFloat]()
         static var shadowLightOffsetX = [String:CGFloat]()
         static var shadowLightOffsetY = [String:CGFloat]()
+        static var shadowRadius = [String:CGFloat]()
+        static var initied = [String:Bool]()
     }
     
     @IBInspectable
@@ -49,6 +51,20 @@ extension UIView {
         get {
             let tmpAddress = String(format: "%p", unsafeBitCast(self, to: Int.self))
             return Params.cornerRadius[tmpAddress] ?? 0.0
+        }
+    }
+    
+    @IBInspectable
+    public var shadowRadius: CGFloat
+    {
+        set (radius) {
+            let tmpAddress = String(format: "%p", unsafeBitCast(self, to: Int.self))
+            Params.shadowRadius[tmpAddress] = radius
+        }
+
+        get {
+            let tmpAddress = String(format: "%p", unsafeBitCast(self, to: Int.self))
+            return Params.shadowRadius[tmpAddress] ?? 4.0
         }
     }
     
@@ -178,12 +194,10 @@ extension UIView {
         }
     }
     
-    /*open override class func awakeFromNib() {
+    open func initied() -> Bool {
         let tmpAddress = String(format: "%p", unsafeBitCast(self, to: Int.self))
-        if(Params.active[tmpAddress] == true){
-            setupShadows()
-        }
-    }*/
+        return Params.initied[tmpAddress] ?? false;
+    }
 
     open func setup() {
         var shadowLayerDark:CAShapeLayer = CAShapeLayer();
@@ -205,6 +219,8 @@ extension UIView {
         }
 
         let tmpAddress = String(format: "%p", unsafeBitCast(self, to: Int.self))
+        
+        Params.initied[tmpAddress] = true;
         
         var corners:UIRectCorner = UIRectCorner()
         
@@ -229,6 +245,7 @@ extension UIView {
         }
         
         cornerRadius = (Params.cornerRadius[tmpAddress] != nil) ? Params.cornerRadius[tmpAddress]! : 0.0
+        shadowRadius = (Params.shadowRadius[tmpAddress] != nil) ? Params.shadowRadius[tmpAddress]! : 4.0
         
         if(!hasDark) {
             shadowLayerDark.name = "shadowDark"
@@ -241,7 +258,7 @@ extension UIView {
             shadowLayerDark.addSublayer(content)
         }
         shadowLayerDark.frame = bounds
-        shadowLayerDark.shadowRadius = 4
+        shadowLayerDark.shadowRadius = shadowRadius;
         shadowLayerDark.shadowOpacity = 1
         
         var reverse:CGFloat = 1.0;
@@ -266,7 +283,7 @@ extension UIView {
             shadowLayerLight.addSublayer(content)
         }
         shadowLayerLight.frame = bounds
-        shadowLayerLight.shadowRadius = 4
+        shadowLayerLight.shadowRadius = shadowRadius
         shadowLayerLight.shadowOpacity = 1
         
         let lightOffsetX:CGFloat = (Params.shadowLightOffsetX[tmpAddress] != nil) ? Params.shadowLightOffsetX[tmpAddress]! : 2.0
@@ -281,9 +298,11 @@ extension UIView {
         if(self.layer.sublayers != nil){
             for item in self.layer.sublayers! {
                 if item.name == "shadowDark" {
+                    self.backgroundColor = UIColor(cgColor: item.sublayers![0].backgroundColor!);
                     item.removeFromSuperlayer();
                 }
                 if item.name == "shadowLight" {
+                    self.backgroundColor = UIColor(cgColor: item.sublayers![0].backgroundColor!);
                     item.removeFromSuperlayer();
                 }
             }

@@ -73,12 +73,21 @@ extension UIButton {
         }
     }
     
-    open override func draw(_ rect: CGRect) {
+    open override func layoutSubviews() {
+        let tmpAddress = String(format: "%p", unsafeBitCast(self, to: Int.self))
+        if(Params.active[tmpAddress] == true){
+            self.backgroundColor = UIColor.clear;
+        }
+    }
+    
+    @objc open override func draw(_ rect: CGRect) {
+        super.draw(rect);
+        
         let tmpAddress = String(format: "%p", unsafeBitCast(self, to: Int.self))
         if(Params.active[tmpAddress] == true){
             setupShadows()
+            self.backgroundColor = UIColor.clear
         }
-        self.backgroundColor = UIColor.clear
     }
 
     func setupShadows() {
@@ -86,20 +95,25 @@ extension UIButton {
         var shadowLayerLight:CAShapeLayer = CAShapeLayer();
         var hasDark = false;
         var hasLight = false;
-        for item in self.layer.sublayers! {
-            if item.name == "shadowDark" {
-                shadowLayerDark = item as! CAShapeLayer
-                hasDark = true;
-            }
-            if item.name == "shadowLight" {
-                shadowLayerLight = item as! CAShapeLayer
-                hasLight = true;
+        if(self.layer.sublayers != nil) {
+            for item in self.layer.sublayers! {
+                if item.name == "shadowDark" {
+                    shadowLayerDark = item as! CAShapeLayer
+                    hasDark = true;
+                }
+                if item.name == "shadowLight" {
+                    shadowLayerLight = item as! CAShapeLayer
+                    hasLight = true;
+                }
             }
         }
 
         let tmpAddress = String(format: "%p", unsafeBitCast(self, to: Int.self))
         
         var corners:UIRectCorner = UIRectCorner()
+        
+        cornerRadius = (Params.cornerRadius[tmpAddress] != nil) ? Params.cornerRadius[tmpAddress]! : 0.0
+        shadowRadius = (Params.shadowRadius[tmpAddress] != nil) ? Params.shadowRadius[tmpAddress]! : 4.0
         
         if(Params.cornersLeft[tmpAddress] != nil) {
             if(Params.cornersLeft[tmpAddress] == true){
@@ -121,18 +135,21 @@ extension UIButton {
             corners.insert(.bottomRight);
         }
         
-        var bgColor:UIColor = self.backgroundColor!;
-        if(ButtonParams.normalColor[tmpAddress] != nil) {
-            bgColor = ButtonParams.normalColor[tmpAddress]!;
+        var bgColor:UIColor?;
+        if(self.backgroundColor != nil){
+            bgColor = self.backgroundColor!;
+            if(ButtonParams.normalColor[tmpAddress] != nil) {
+                bgColor = ButtonParams.normalColor[tmpAddress]!;
+            }
         }
         
         if(!hasDark) {
             shadowLayerDark.name = "shadowDark"
-            self.layer.insertSublayer(shadowLayerDark, at: 0)
+            self.layer.insertSublayer(shadowLayerDark, below: self.imageView!.layer)
             let content:CAShapeLayer = CAShapeLayer()
             content.frame = bounds
-            content.backgroundColor = bgColor.cgColor
-            roundCorners(layer:content, corners: corners, radius: Params.cornerRadius[tmpAddress]!)
+            content.backgroundColor = (bgColor != nil) ? bgColor!.cgColor : UIColor.clear.cgColor;
+            roundCorners(layer:content, corners: corners, radius: cornerRadius)
             content.masksToBounds = true;
             shadowLayerDark.addSublayer(content)
         }
@@ -158,10 +175,10 @@ extension UIButton {
         
         if(!hasLight) {
             shadowLayerLight.name = "shadowLight"
-            self.layer.insertSublayer(shadowLayerLight, at: 0)
+            self.layer.insertSublayer(shadowLayerLight, below: self.imageView!.layer)
             let content:CAShapeLayer = CAShapeLayer()
             content.frame = bounds
-            content.backgroundColor = bgColor.cgColor
+            content.backgroundColor = (bgColor != nil) ? bgColor!.cgColor : UIColor.clear.cgColor;
             
             roundCorners(layer:content, corners: corners, radius: Params.cornerRadius[tmpAddress]!)
             content.masksToBounds = true;
@@ -184,6 +201,12 @@ extension UIButton {
     
     override open func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         let tmpAddress = String(format: "%p", unsafeBitCast(self, to: Int.self))
+        
+        if(Params.active[tmpAddress] != true){
+            super.touchesBegan(touches, with: event)
+            return;
+        }
+        
         if(Params.active[tmpAddress] == true){
             Params.reverse[tmpAddress] = (Params.reverse[tmpAddress] != nil) ? !Params.reverse[tmpAddress]! : true
             setupShadows()
@@ -239,6 +262,11 @@ extension UIButton {
     override open func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         let tmpAddress = String(format: "%p", unsafeBitCast(self, to: Int.self))
         
+        if(Params.active[tmpAddress] == false){
+            super.touchesEnded(touches, with: event)
+            return;
+        }
+        
         var isToggle = false;
         if(ButtonParams.isToggle[tmpAddress] != nil){
             isToggle = (ButtonParams.isToggle[tmpAddress] != nil) ? ButtonParams.isToggle[tmpAddress]! : false
@@ -256,6 +284,11 @@ extension UIButton {
 
     override open func touchesCancelled(_ touches: Set<UITouch>, with event: UIEvent?) {
         let tmpAddress = String(format: "%p", unsafeBitCast(self, to: Int.self))
+        
+        if(Params.active[tmpAddress] == false){
+            super.touchesCancelled(touches, with: event)
+            return;
+        }
         
         var isToggle = false;
         if(ButtonParams.isToggle[tmpAddress] != nil){

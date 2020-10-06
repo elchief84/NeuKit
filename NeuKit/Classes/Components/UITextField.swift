@@ -28,7 +28,7 @@ extension UITextField {
         }
     }
     
-    open override func draw(_ rect: CGRect) {
+    @objc open override func draw(_ rect: CGRect) {
         let tmpAddress = String(format: "%p", unsafeBitCast(self, to: Int.self))
         if(Params.active[tmpAddress] == true){
             setupShadows()
@@ -82,8 +82,14 @@ extension UITextField {
             corners.insert(.topRight);
             corners.insert(.bottomRight);
         }
+        
+        if(UITextFieldParams.horizontalMargin[tmpAddress] != nil) {
+            horizontalMargin = UITextFieldParams.horizontalMargin[tmpAddress]!;
+        }else{
+            horizontalMargin = 20.0;
+        }
 
-        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: UITextFieldParams.horizontalMargin[tmpAddress]!, height: self.frame.size.height))
+        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: horizontalMargin, height: self.frame.size.height))
         self.leftView = paddingView
         self.rightView = paddingView
         self.leftViewMode = .always
