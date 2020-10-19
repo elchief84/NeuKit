@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'NeuKit'
-  s.version          = '0.0.3'
+  s.version          = '0.0.4'
   s.summary          = 'A Neumorphic replacement of Apple UIKit.'
 
 # This description is used to generate tags and improve search results.
@@ -29,7 +29,8 @@ A Neumorphic replacement of Apple UIKit. Turn your UI to neumorphic style.
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '10.0'
-
+  s.swift_version = '4.0'
+  
   s.source_files = 'NeuKit/Classes/**/*'
   
   # s.resource_bundles = {
