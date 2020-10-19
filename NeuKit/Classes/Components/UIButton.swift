@@ -90,7 +90,7 @@ extension UIButton {
         }
     }
 
-    func setupShadows() {
+    open func setupShadows() {
         var shadowLayerDark:CAShapeLayer = CAShapeLayer();
         var shadowLayerLight:CAShapeLayer = CAShapeLayer();
         var hasDark = false;
@@ -196,6 +196,8 @@ extension UIButton {
         }else{
             shadowLayerLight.shadowColor = UIColor.clear.cgColor;
         }
+        
+        self.backgroundColor = UIColor.clear;
 
     }
     
