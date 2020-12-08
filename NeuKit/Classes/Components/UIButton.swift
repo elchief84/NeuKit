@@ -73,12 +73,12 @@ extension UIButton {
         }
     }
     
-    open override func layoutSubviews() {
+    /*open override func layoutSubviews() {
         let tmpAddress = String(format: "%p", unsafeBitCast(self, to: Int.self))
         if(Params.active[tmpAddress] == true){
             self.backgroundColor = UIColor.clear;
         }
-    }
+    }*/
     
     @objc open override func draw(_ rect: CGRect) {
         super.draw(rect);
@@ -93,20 +93,23 @@ extension UIButton {
     open func setupShadows() {
         var shadowLayerDark:CAShapeLayer = CAShapeLayer();
         var shadowLayerLight:CAShapeLayer = CAShapeLayer();
-        var hasDark = false;
-        var hasLight = false;
-        if(self.layer.sublayers != nil) {
+        
+        if(self.layer.sublayers != nil){
             for item in self.layer.sublayers! {
                 if item.name == "shadowDark" {
                     shadowLayerDark = item as! CAShapeLayer
-                    hasDark = true;
+                    shadowLayerDark.removeFromSuperlayer();
+                    self.backgroundColor = UIColor(cgColor: shadowLayerDark.sublayers![0].backgroundColor!);
                 }
                 if item.name == "shadowLight" {
                     shadowLayerLight = item as! CAShapeLayer
-                    hasLight = true;
+                    shadowLayerLight.removeFromSuperlayer();
+                    self.backgroundColor = UIColor(cgColor: shadowLayerLight.sublayers![0].backgroundColor!);
                 }
             }
         }
+        shadowLayerDark = CAShapeLayer();
+        shadowLayerLight = CAShapeLayer();
 
         let tmpAddress = String(format: "%p", unsafeBitCast(self, to: Int.self))
         
@@ -143,16 +146,15 @@ extension UIButton {
             }
         }
         
-        if(!hasDark) {
-            shadowLayerDark.name = "shadowDark"
-            self.layer.insertSublayer(shadowLayerDark, below: self.imageView!.layer)
-            let content:CAShapeLayer = CAShapeLayer()
-            content.frame = bounds
-            content.backgroundColor = (bgColor != nil) ? bgColor!.cgColor : UIColor.clear.cgColor;
-            roundCorners(layer:content, corners: corners, radius: cornerRadius)
-            content.masksToBounds = true;
-            shadowLayerDark.addSublayer(content)
-        }
+        shadowLayerDark.name = "shadowDark"
+        self.layer.insertSublayer(shadowLayerDark, below: self.imageView!.layer)
+        var content:CAShapeLayer = CAShapeLayer()
+        content.frame = bounds
+        content.backgroundColor = (bgColor != nil) ? bgColor!.cgColor : UIColor.clear.cgColor;
+        roundCorners(layer:content, corners: corners, radius: cornerRadius)
+        content.masksToBounds = true;
+        shadowLayerDark.addSublayer(content)
+            
         shadowLayerDark.frame = bounds
         shadowLayerDark.shadowRadius = 4
         shadowLayerDark.shadowOpacity = 1
@@ -173,17 +175,16 @@ extension UIButton {
             shadowLayerDark.shadowColor = UIColor.clear.cgColor;
         }
         
-        if(!hasLight) {
-            shadowLayerLight.name = "shadowLight"
-            self.layer.insertSublayer(shadowLayerLight, below: self.imageView!.layer)
-            let content:CAShapeLayer = CAShapeLayer()
-            content.frame = bounds
-            content.backgroundColor = (bgColor != nil) ? bgColor!.cgColor : UIColor.clear.cgColor;
-            
-            roundCorners(layer:content, corners: corners, radius: Params.cornerRadius[tmpAddress]!)
-            content.masksToBounds = true;
-            shadowLayerLight.addSublayer(content)
-        }
+        shadowLayerLight.name = "shadowLight"
+        self.layer.insertSublayer(shadowLayerLight, below: self.imageView!.layer)
+        content = CAShapeLayer()
+        content.frame = bounds
+        content.backgroundColor = (bgColor != nil) ? bgColor!.cgColor : UIColor.clear.cgColor;
+        
+        roundCorners(layer:content, corners: corners, radius: Params.cornerRadius[tmpAddress]!)
+        content.masksToBounds = true;
+        shadowLayerLight.addSublayer(content)
+        
         shadowLayerLight.frame = bounds
         shadowLayerLight.shadowRadius = 4
         shadowLayerLight.shadowOpacity = 1

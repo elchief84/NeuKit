@@ -3,10 +3,4 @@ platform :ios, '11.0'
 
 target 'NeuKit_Example' do
   pod 'NeuKit', :path => '../'
-
-  target 'NeuKit_Tests' do
-    inherit! :search_paths
-
-    
-  end
 end

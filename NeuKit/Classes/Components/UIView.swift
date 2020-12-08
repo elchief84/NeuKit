@@ -202,21 +202,22 @@ extension UIView {
     open func setup() {
         var shadowLayerDark:CAShapeLayer = CAShapeLayer();
         var shadowLayerLight:CAShapeLayer = CAShapeLayer();
-        var hasDark = false;
-        var hasLight = false;
-        
         if(self.layer.sublayers != nil){
             for item in self.layer.sublayers! {
                 if item.name == "shadowDark" {
                     shadowLayerDark = item as! CAShapeLayer
-                    hasDark = true;
+                    shadowLayerDark.removeFromSuperlayer();
+                    self.backgroundColor = UIColor(cgColor: shadowLayerDark.sublayers![0].backgroundColor!);
                 }
                 if item.name == "shadowLight" {
                     shadowLayerLight = item as! CAShapeLayer
-                    hasLight = true;
+                    shadowLayerLight.removeFromSuperlayer();
+                    self.backgroundColor = UIColor(cgColor: shadowLayerLight.sublayers![0].backgroundColor!);
                 }
             }
         }
+        shadowLayerDark = CAShapeLayer();
+        shadowLayerLight = CAShapeLayer();
 
         let tmpAddress = String(format: "%p", unsafeBitCast(self, to: Int.self))
         
@@ -247,16 +248,15 @@ extension UIView {
         cornerRadius = (Params.cornerRadius[tmpAddress] != nil) ? Params.cornerRadius[tmpAddress]! : 0.0
         shadowRadius = (Params.shadowRadius[tmpAddress] != nil) ? Params.shadowRadius[tmpAddress]! : 4.0
         
-        if(!hasDark) {
-            shadowLayerDark.name = "shadowDark"
-            self.layer.insertSublayer(shadowLayerDark, at: 0)
-            let content:CAShapeLayer = CAShapeLayer()
-            content.frame = bounds
-            content.backgroundColor = self.backgroundColor?.cgColor
-            roundCorners(layer:content, corners: corners, radius: cornerRadius)
-            content.masksToBounds = true;
-            shadowLayerDark.addSublayer(content)
-        }
+        shadowLayerDark.name = "shadowDark"
+        self.layer.insertSublayer(shadowLayerDark, at: 0)
+        var content:CAShapeLayer = CAShapeLayer()
+        content.frame = bounds
+        content.backgroundColor = self.backgroundColor?.cgColor
+        roundCorners(layer:content, corners: corners, radius: cornerRadius)
+        content.masksToBounds = true;
+        shadowLayerDark.addSublayer(content)
+        
         shadowLayerDark.frame = bounds
         shadowLayerDark.shadowRadius = shadowRadius;
         shadowLayerDark.shadowOpacity = 1
@@ -271,17 +271,16 @@ extension UIView {
         shadowLayerDark.shadowOffset = CGSize( width: reverse*darkOffsetX, height: reverse*darkOffsetY)
         shadowLayerDark.shadowColor = (Params.darkShadowColor[tmpAddress] != nil) ? Params.darkShadowColor[tmpAddress]?.cgColor : UIColor(red: 8/255, green: 8/255, blue: 33/255, alpha: 0.12).cgColor
         
-        if(!hasLight) {
-            shadowLayerLight.name = "shadowLight"
-            self.layer.insertSublayer(shadowLayerLight, at: 0)
-            let content:CAShapeLayer = CAShapeLayer()
-            content.frame = bounds
-            content.backgroundColor = self.backgroundColor?.cgColor
-            
-            roundCorners(layer:content, corners: corners, radius: cornerRadius)
-            content.masksToBounds = true;
-            shadowLayerLight.addSublayer(content)
-        }
+        shadowLayerLight.name = "shadowLight"
+        self.layer.insertSublayer(shadowLayerLight, at: 0)
+        content = CAShapeLayer()
+        content.frame = bounds
+        content.backgroundColor = self.backgroundColor?.cgColor
+        
+        roundCorners(layer:content, corners: corners, radius: cornerRadius)
+        content.masksToBounds = true;
+        shadowLayerLight.addSublayer(content)
+        
         shadowLayerLight.frame = bounds
         shadowLayerLight.shadowRadius = shadowRadius
         shadowLayerLight.shadowOpacity = 1
