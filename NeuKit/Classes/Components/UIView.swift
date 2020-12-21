@@ -7,8 +7,31 @@
 
 import UIKit
 
+private let swizzling: (AnyClass, Selector, Selector) -> () = { forClass, originalSelector, swizzledSelector in
+    guard
+        let originalMethod = class_getInstanceMethod(forClass, originalSelector),
+        let swizzledMethod = class_getInstanceMethod(forClass, swizzledSelector)
+    else { return }
+    method_exchangeImplementations(originalMethod, swizzledMethod)
+}
+
 @IBDesignable
 extension UIView {
+    
+    public static let classInit: Void = {
+        let originalSelector = #selector(layoutSubviews)
+        let swizzledSelector = #selector(swizzled_layoutSubviews)
+        swizzling(UIView.self, originalSelector, swizzledSelector)
+    }()
+    
+    @objc func swizzled_layoutSubviews() {
+        swizzled_layoutSubviews();
+        
+        let tmpAddress = String(format: "%p", unsafeBitCast(self, to: Int.self))
+        if(Params.active[tmpAddress] == true) {
+            setup();
+        }
+    }
     
     struct Params {
         static var active = [String:Bool]()
@@ -198,8 +221,25 @@ extension UIView {
         let tmpAddress = String(format: "%p", unsafeBitCast(self, to: Int.self))
         return Params.initied[tmpAddress] ?? false;
     }
+    
+    open override func awakeFromNib() {
+        self.layer.addObserver(self, forKeyPath: "frame", options: NSKeyValueObservingOptions(rawValue: 0), context: nil);
+    }
+    
+    open override class func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if(keyPath == "frame"){
+            debugPrint("frame changed");
+        }
+    }
 
     open func setup() {
+        let tmpAddress = String(format: "%p", unsafeBitCast(self, to: Int.self))
+        Params.initied[tmpAddress] = true;
+        
+        if(Params.active[tmpAddress] != true){
+            return;
+        }
+        
         var shadowLayerDark:CAShapeLayer = CAShapeLayer();
         var shadowLayerLight:CAShapeLayer = CAShapeLayer();
         if(self.layer.sublayers != nil){
@@ -207,21 +247,20 @@ extension UIView {
                 if item.name == "shadowDark" {
                     shadowLayerDark = item as! CAShapeLayer
                     shadowLayerDark.removeFromSuperlayer();
-                    self.backgroundColor = UIColor(cgColor: shadowLayerDark.sublayers![0].backgroundColor!);
+                    if(shadowLayerDark.sublayers!.count > 0){
+                        self.backgroundColor = UIColor(cgColor: shadowLayerDark.sublayers![0].backgroundColor ?? UIColor.clear.cgColor);
+                    }
                 }
                 if item.name == "shadowLight" {
                     shadowLayerLight = item as! CAShapeLayer
                     shadowLayerLight.removeFromSuperlayer();
-                    self.backgroundColor = UIColor(cgColor: shadowLayerLight.sublayers![0].backgroundColor!);
+                    self.backgroundColor = UIColor(cgColor: shadowLayerLight.sublayers![0].backgroundColor ?? UIColor.clear.cgColor);
                 }
             }
         }
         shadowLayerDark = CAShapeLayer();
         shadowLayerLight = CAShapeLayer();
 
-        let tmpAddress = String(format: "%p", unsafeBitCast(self, to: Int.self))
-        
-        Params.initied[tmpAddress] = true;
         
         var corners:UIRectCorner = UIRectCorner()
         

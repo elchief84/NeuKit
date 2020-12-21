@@ -146,11 +146,22 @@ extension UIButton {
             }
         }
         
+        var fgColor:UIColor?;
+        if(self.backgroundColor != nil){
+            fgColor = self.backgroundColor!;
+            if(ButtonParams.normalColor[tmpAddress] != nil) {
+                fgColor = ButtonParams.normalColor[tmpAddress]!;
+            }
+        }
+        
         shadowLayerDark.name = "shadowDark"
         self.layer.insertSublayer(shadowLayerDark, below: self.imageView!.layer)
         var content:CAShapeLayer = CAShapeLayer()
         content.frame = bounds
         content.backgroundColor = (bgColor != nil) ? bgColor!.cgColor : UIColor.clear.cgColor;
+        if(self.isSelected){
+            content.backgroundColor = (fgColor != nil) ? fgColor!.cgColor : UIColor.clear.cgColor;
+        }
         roundCorners(layer:content, corners: corners, radius: cornerRadius)
         content.masksToBounds = true;
         shadowLayerDark.addSublayer(content)
