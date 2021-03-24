@@ -213,11 +213,11 @@ extension UIButton {
 
     }
     
-    override open func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override open func touchesBegan(_ touches: Set<UITouch>?, with event: UIEvent?) {
         let tmpAddress = String(format: "%p", unsafeBitCast(self, to: Int.self))
         
         if(Params.active[tmpAddress] != true){
-            super.touchesBegan(touches, with: event)
+            super.touchesBegan(touches!, with: event)
             return;
         }
         
@@ -270,7 +270,10 @@ extension UIButton {
                 UIImpactFeedbackGenerator(style: force).impactOccurred()
             }
         }
-        super.touchesBegan(touches, with: event)
+        
+        if(touches != nil){
+            super.touchesBegan(touches!, with: event)
+        }
     }
 
     override open func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
